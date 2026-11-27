@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///C:/Users/user/Downloads/%EC%A0%84%EC%9C%A0%EC%86%94/index.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f2e9">
+    <meta name="description" content="오늘의 마음에 맞는 아주 작은 일상 미션, 오늘의 창문">
+    <title>오늘의 창문 · 작은 시작을 위한 공간</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer=""></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="오늘의 창문, 처음으로">
+          <span class="brand-mark" aria-hidden="true">▦</span>
+          <span>오늘의 창문<small>Today's Window</small></span>
+        </a>
+        <a class="header-help" href="#help">도움이 필요할 때 <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow" id="today-label">11월 25일, 오늘의 창문</p>
+            <h1 id="hero-title">오늘은 <em>이만큼만</em><br>해도 괜찮아요.</h1>
+            <p>마음의 날씨를 알려주면, 지금 할 수 있는 아주 작은 일을 함께 찾아볼게요.</p>
+            <a class="hero-cta" href="#checkin">마음 날씨 고르기 <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="room-art" aria-hidden="true">
+            <div class="art-glow"></div>
+            <div class="window-frame">
+              <div class="window-sky"><span class="sun"></span><span class="cloud cloud-one"></span><span class="cloud cloud-two"></span></div>
+              <span class="window-cross vertical"></span><span class="window-cross horizontal"></span>
+            </div>
+            <div class="sill"></div>
+            <div class="plant"><span class="leaf leaf-one"></span><span class="leaf leaf-two"></span><span class="leaf leaf-three"></span><span class="pot"></span></div>
+            <div class="mug"><span class="mug-handle"></span></div>
+          </div>
+        </section>
+
+        <div class="content-grid">
+          <div class="main-column">
+            <section class="card checkin-card" id="checkin" aria-labelledby="checkin-title">
+              <div class="section-heading"><span class="step">01</span><div><p class="eyebrow">마음 살피기</p><h2 id="checkin-title">오늘 마음의 날씨는 어떤가요?</h2></div></div>
+              <p class="section-intro">정답은 없어요. 가장 가까운 날씨를 하나 골라주세요.</p>
+              <div class="mood-options" id="mood-options" role="group" aria-label="오늘의 마음 날씨"><button class="mood-option" type="button" data-mood="0" aria-pressed="false"><span class="emoji" aria-hidden="true">🌧️</span><span class="label">많이 힘들어요</span></button><button class="mood-option" type="button" data-mood="1" aria-pressed="false"><span class="emoji" aria-hidden="true">☁️</span><span class="label">무기력해요</span></button><button class="mood-option" type="button" data-mood="2" aria-pressed="false"><span class="emoji" aria-hidden="true">🌫️</span><span class="label">그럭저럭</span></button><button class="mood-option" type="button" data-mood="3" aria-pressed="false"><span class="emoji" aria-hidden="true">⛅</span><span class="label">조금 괜찮아요</span></button><button class="mood-option" type="button" data-mood="4" aria-pressed="false"><span class="emoji" aria-hidden="true">☀️</span><span class="label">의욕이 있어요</span></button></div>
+              <p class="quiet-note">고른 날씨는 이 브라우저에만 기록돼요.</p>
+              <p class="quiet-note is-hidden" id="mood-edit-note" role="status">다른 날씨를 고르면 오늘의 기분만 수정돼요. 완료하거나 쉬어 간 기록은 유지돼요.</p>
+            </section>
+
+            <section class="card mission-card is-hidden" id="mission-section" aria-labelledby="mission-title">
+              <div class="section-heading"><span class="step">02</span><div><p class="eyebrow">작은 시작</p><h2 id="mission-title">오늘의 작은 미션</h2></div></div>
+              <div class="mission-box">
+                <div class="mission-icon" id="mission-icon" aria-hidden="true">💧</div>
+                <div class="mission-content"><span class="level-pill" id="mission-level">Lv.0 · 아주 가볍게</span><h3 id="mission-name"></h3><p id="mission-description"></p></div>
+              </div>
+              <div class="mission-actions" id="mission-actions">
+                <button class="button button-primary" type="button" id="complete-only">완료만 기록하기</button>
+                <button class="button button-subtle" type="button" id="start-proof">기분·스티커도 남기기</button>
+                <button class="button button-subtle" type="button" id="different-mission">다른 미션 받기</button>
+                <button class="button button-subtle" type="button" id="easier-mission">더 쉬운 미션 받기</button>
+                <button class="button button-text" type="button" id="take-rest">오늘은 쉬기</button>
+              </div>
+              <p class="quiet-note" id="mission-note">못 해도 괜찮아요. 언제든 더 쉬운 미션을 받을 수 있어요.</p>
+
+              <div class="proof-panel is-hidden" id="proof-panel">
+                <h3>어떤 순간이었나요?</h3>
+                <p>스티커, 사진, 이후 기분은 모두 선택 사항이에요. 아무것도 고르지 않고 기록해도 괜찮아요.</p>
+                <div class="sticker-options" id="sticker-options" role="group" aria-label="인증 스티커">
+                  <button type="button" data-sticker="🌱" aria-pressed="false">🌱 <span>해냈어요</span></button>
+                  <button type="button" data-sticker="✨" aria-pressed="false">✨ <span>조금 반짝</span></button>
+                  <button type="button" data-sticker="🫶" aria-pressed="false">🫶 <span>나를 응원</span></button>
+                </div>
+                <label class="photo-label" for="proof-photo">사진 한 장 고르기 <span>선택 사항 · 기기에 저장하지 않음</span></label>
+                <input id="proof-photo" type="file" accept="image/*">
+                <div class="photo-preview-wrap is-hidden" id="photo-preview-wrap">
+                  <img id="photo-preview" alt="선택한 사진 미리보기">
+                  <button class="button button-text" type="button" id="remove-photo">사진 선택 취소</button>
+                </div>
+                <p class="photo-status" id="photo-status" aria-live="polite"></p>
+                <fieldset class="after-mood"><legend>지금 마음은 어떤가요? (선택)</legend><div class="after-options" id="after-options"></div></fieldset>
+                <button class="button button-primary" type="button" id="complete-mission" disabled="">오늘의 기록 남기기</button>
+              </div>
+
+              <div class="complete-panel is-hidden" id="complete-panel" role="status"></div>
+            </section>
+
+            <section class="card record-card" aria-labelledby="record-title">
+              <div class="section-heading"><span class="step">03</span><div><p class="eyebrow">나의 걸음</p><h2 id="record-title">최근 기록</h2></div></div>
+              <div id="history" class="history"><p class="history-empty">첫 마음 날씨를 고르면 여기에 기록이 남아요.</p></div>
+            </section>
+          </div>
+
+          <aside class="side-column">
+            <section class="side-card together-card" aria-labelledby="together-title">
+              <span class="side-icon" aria-hidden="true">✳</span>
+              <p class="eyebrow">느슨한 연대</p><h2 id="together-title">어딘가의 나에게도<br>같은 하루가 있어요.</h2>
+              <blockquote id="encouragement">“느린 걸음도 분명 앞으로 가는 걸음이에요.”</blockquote>
+              <p class="demo-caption">미리 준비된 익명 응원 문구입니다.</p>
+              <div class="reaction-actions" role="group" aria-label="공감 스티커">
+                <button type="button" data-reaction="따뜻한 눈빛">👀 따뜻한 눈빛</button>
+                <button type="button" data-reaction="토닥토닥">🫂 토닥토닥</button>
+              </div>
+              <p class="reaction-status" id="reaction-status" aria-live="polite">데모 화면으로, 반응은 실제로 전송되지 않아요.</p>
+            </section>
+
+            <section class="side-card rest-card" aria-labelledby="rest-title">
+              <span class="side-icon" aria-hidden="true">☾</span>
+              <p class="eyebrow">비밀의 휴식권</p><h2 id="rest-title">쉬어 가는 것도<br>오늘의 선택이에요.</h2>
+              <p id="rest-description">미션이 버거우면 오늘은 쉬어도 괜찮아요. 기록이 끊겨도 불이익은 없어요.</p>
+              <button class="button button-subtle" type="button" id="rest-side-button">오늘 쉬어 갈래요</button>
+            </section>
+          </aside>
+        </div>
+
+        <section class="help-section" id="help" aria-labelledby="help-title">
+          <div><p class="eyebrow">혼자 버티지 않아도 돼요</p><h2 id="help-title">도움이 필요한 날엔 연결해요.</h2><p>마음이 오래 힘들거나 안전이 걱정될 때는 전문 상담의 도움을 받을 수 있어요.</p></div>
+          <div class="help-links"><a class="help-call" href="tel:109">자살예방상담전화 <strong>109</strong> <span>24시간 · 전화 연결 ↗</span></a><a class="help-more" href="https://www.129.go.kr/109" target="_blank" rel="noopener noreferrer">109 안내 보기 ↗</a></div>
+        </section>
+      </main>
+
+      <footer><span>오늘의 창문 · 작은 시작을 위한 데모</span><span>진단이나 치료를 제공하지 않는 자기 돌봄 도구입니다.</span></footer>
+    </div>
+  
+
+</body></html>
